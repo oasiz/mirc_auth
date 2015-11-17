@@ -1,8 +1,6 @@
-# mIRC
+##mIRC script for passport authentication with the Oasiz IRCX chat service.
 
-mIRC script for passport authentication with the Oasiz IRCX chat service.
-
-Instructions:
+**Instructions**
 
 1. Create free user profile/account: http://oasiz.co/rG
 2. Generate API key & password: http://oasiz.co/aA
@@ -11,4 +9,4 @@ Instructions:
 5. Follow instructions to add account API details.
 6. Connect :-)
 
-Note: It's highly recommended that you do not modify oasiz.auth.mrc in any way, as this file is designed to be swapped/replaced over should there be connection and/or authentication changes made to the chat service. You have been warned!
+**Note:** It's highly recommended that you do not modify oasiz.auth.mrc in any way, as this file is designed to be swapped/replaced over should there be connection and/or authentication changes made to the chat service. You have been warned!
