@@ -2,9 +2,9 @@
 ;;;;;;;;; Oasiz IRCX Chat Authentication ;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; VERSION  1.1.0
+;; VERSION  1.1.1
 ;; AUTHOR   Rob Hildyard
-;; DATE     16.11.15
+;; DATE     17.11.15
 ;; SITE     www.oasiz.com
 ;; DATA     chat.oasiz.net/chat_api_key
 
@@ -49,8 +49,7 @@ alias access_token {
   ;; Returns valid access token in JSON format
   ;; Use md5 because certain characters fail in URLs
   set %_oa.api_time $ctime
-  var %json $chr(123) $+ "timestamp": $+ %_oa.api_time $+ $chr(125)
-  return $md5($hmacsha1(%_oa.api_pass,%json))
+  return $md5($hmacsha1(%_oa.api_pass,$chr(123) $+ "timestamp": $+ %_oa.api_time $+ $chr(125)))
 }
 
 ;; Set API Data
@@ -107,6 +106,7 @@ raw auth:*: {
 
 raw 800:*:{
   if ($2 === 0) && ($is_oasiz) {
+    .raw -q USER username hostname servername :mirc
     .raw -q AUTH GateKeeperPassport I :OASSP000000X1A
     .halt
   }
@@ -156,4 +156,3 @@ on *:sockread:oasiz*: {
   }
   sockread %z
 }
-
