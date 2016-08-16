@@ -2,9 +2,9 @@
 ;;;;;;;;; Oasiz IRCX Chat Authentication ;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; VERSION  1.1.1
+;; VERSION  1.1.2
 ;; AUTHOR   Rob Hildyard
-;; DATE     17.11.15
+;; DATE     16.08.16
 ;; SITE     www.oasiz.com
 ;; DATA     chat.oasiz.net/chat_api_key
 
@@ -80,7 +80,7 @@ alias api_call {
     set %_oa.api_query $2
     set %_oa.api_call ircx_challenge
   }
-  sockopen oasiz $+ $rand(000,999) www.oasiz.com 80
+  sockopen -e oasiz $+ $rand(000,999) www.oasiz.com 443
 }
 
 on ^*:logon:*: {
