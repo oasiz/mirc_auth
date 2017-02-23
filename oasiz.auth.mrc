@@ -98,7 +98,7 @@ raw auth:*: {
     }
     else {
       set %_oa.challengeType 1
-      $api_call(2, $remove($3,OASSP000000))
+      $api_call(2, $remove($3,GKSSP000000))
     }
   }
   .halt
@@ -107,7 +107,7 @@ raw auth:*: {
 raw 800:*:{
   if ($2 === 0) && ($is_oasiz) {
     .raw -q USER username hostname servername :mirc
-    .raw -q AUTH GateKeeperPassport I :OASSP000000X1A
+    .raw -q AUTH GateKeeperPassport I :GKSSP000000X1A
     .halt
   }
 }
@@ -149,7 +149,7 @@ on *:sockread:oasiz*: {
   var %z | sockread %z
   while ($sockbr > 0) {
     tokenize 32 %z
-    if ($regex($1-,/challenge": "(.*)"/)) { set %_oa.challengeCode $regml(1) | $iif(%_oa.challengeType == 1,.RAW -q AUTH GateKeeperPassport S :OASSP000000 $+ $regml(1),) | $callback(3, $regml(1)) | return }
+    if ($regex($1-,/challenge": "(.*)"/)) { set %_oa.challengeCode $regml(1) | $iif(%_oa.challengeType == 1,.RAW -q AUTH GateKeeperPassport S :GKSSP000000 $+ $regml(1),) | $callback(3, $regml(1)) | return }
     if ($regex($1-,/authcode": "(.*)"/)) { set %_oa.authcode $regml(1) | $callback(2, $regml(1)) | return }
     if ($regex($1-,/"message": "(.*)"/)) { $callback(7, $regml(1)) | return }
     return
