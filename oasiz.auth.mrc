@@ -2,9 +2,9 @@
 ;;;;;;;;; Oasiz IRCX Chat Authentication ;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; VERSION  1.1.2
+;; VERSION  1.1.3
 ;; AUTHOR   Rob Hildyard
-;; DATE     16.08.16
+;; DATE     23.02.17
 ;; SITE     www.oasiz.com
 ;; DATA     chat.oasiz.net/chat_api_key
 
