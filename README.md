@@ -2,8 +2,8 @@
 
 **Instructions**
 
-1. Create free user profile/account: http://oasiz.co/rG
-2. Generate API key & password: http://oasiz.co/aA
+1. Create free user profile/account: https://oasiz.com/g/rG
+2. Generate API key & password: https://oasiz.com/g/aA
 3. Load oasiz.auth.mrc and oasiz.auth.tool.mrc into mIRC Remotes.
 4. Right click mIRC status window, select Oasiz API Auth and click "Add".
 5. Follow instructions to add account API details.
