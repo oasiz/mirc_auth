@@ -1,4 +1,4 @@
-##mIRC script for passport authentication with the Oasiz IRCX chat service.
+### mIRC script for passport authentication with the Oasiz IRCX chat service.
 
 **Instructions**
 
