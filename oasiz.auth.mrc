@@ -2,9 +2,9 @@
 ;;;;;;;;; Oasiz IRCX Chat Authentication ;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; VERSION  1.1.3
+;; VERSION  1.1.4
 ;; AUTHOR   Rob Hildyard
-;; DATE     23.02.17
+;; DATE     04.03.18
 ;; SITE     www.oasiz.com
 ;; DATA     chat.oasiz.net/chat_api_key
 
@@ -80,7 +80,7 @@ alias api_call {
     set %_oa.api_query $2
     set %_oa.api_call ircx_challenge
   }
-  sockopen -e oasiz $+ $rand(000,999) www.oasiz.com 443
+  sockopen oasiz $+ $rand(000,999) www.oasiz.net 80
 }
 
 on ^*:logon:*: {
@@ -130,7 +130,7 @@ raw 911:*:{
 }
 
 on *:sockopen:oasiz*: {
-  sockwrite -n $sockname GET /api?api_key= $+ %_oa.api_key $+ &access_token= $+ $access_token() $+ &timestamp= $+ %_oa.api_time $+ &api_call= $+ %_oa.api_call $+ &query= $+ %_oa.api_query HTTP/1.1 $+ $crlf $+ host: www.oasiz.com $+ $crlf $+ Connection: close $str($crlf,2)
+  sockwrite -n $sockname GET /api?api_key= $+ %_oa.api_key $+ &access_token= $+ $access_token() $+ &timestamp= $+ %_oa.api_time $+ &api_call= $+ %_oa.api_call $+ &query= $+ %_oa.api_query HTTP/1.1 $+ $crlf $+ host: www.oasiz.net $+ $crlf $+ Connection: close $str($crlf,2)
 }
 
 alias callback {
