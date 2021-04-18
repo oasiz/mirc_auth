@@ -226,8 +226,8 @@ alias oasiz.authtool.setserver {
 }
 
 alias oasiz.authtool.getserver {
-  if ($1 === G) return 96.47.35.82
-  return 96.47.35.81
+  if ($1 === G) return 147.124.219.168
+  return 147.124.219.169
 }
 
 alias oasiz.authtool.connect {
