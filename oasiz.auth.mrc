@@ -4,7 +4,7 @@
 
 ;; VERSION  1.1.4
 ;; AUTHOR   Rob Hildyard
-;; DATE     04.03.18
+;; DATE     18.04.21
 ;; SITE     www.oasiz.com
 ;; DATA     chat.oasiz.net/chat_api_key
 
