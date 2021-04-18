@@ -68,7 +68,7 @@ alias api {
 ;; IRCx AUTH
 
 alias is_oasiz {
-  if (96.47.35.* iswm $server) return $true
+  if (147.124.219.* iswm $server) return $true
   return $false
 }
 
