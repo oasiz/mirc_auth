@@ -4,7 +4,7 @@
 
 ;; VERSION  2.1
 ;; AUTHOR   Rob Hildyard
-;; DATE     18.04.21
+;; DATE     29.09.23
 ;; SITE     www.oasiz.com
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -226,8 +226,8 @@ alias oasiz.authtool.setserver {
 }
 
 alias oasiz.authtool.getserver {
-  if ($1 === G) return 147.124.219.168
-  return 147.124.219.169
+  if ($1 === G) return 96.47.34.241
+  return 96.47.34.246
 }
 
 alias oasiz.authtool.connect {
