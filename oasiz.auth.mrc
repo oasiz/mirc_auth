@@ -2,9 +2,9 @@
 ;;;;;;;;; Oasiz IRCX Chat Authentication ;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; VERSION  1.1.4
+;; VERSION  1.1.5
 ;; AUTHOR   Rob Hildyard
-;; DATE     18.04.21
+;; DATE     30.09.23
 ;; SITE     www.oasiz.com
 ;; DATA     chat.oasiz.net/chat_api_key
 
@@ -68,7 +68,7 @@ alias api {
 ;; IRCx AUTH
 
 alias is_oasiz {
-  if (147.124.219.* iswm $server) return $true
+  if (96.47.34.* iswm $server) return $true
   return $false
 }
 
